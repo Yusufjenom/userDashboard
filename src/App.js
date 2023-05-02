@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import {Space} from 'antd';
+import { useState, createContext } from 'react'
+
+
 import './App.css';
+import AppHeader from './components/AppHeader';
+import PageContent from './components/PageContent';
+import SideMenu from './components/SideMenu';
+import AppFooter from './components/AppFooter';
+
+export const AppContext = createContext()
 
 function App() {
+  const [globalUserName, setGlobalUserName ] = useState("")
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className="App">
+    <AppContext.Provider value={{globalUserName, setGlobalUserName}}>
+      <AppHeader/>
+      <div className='SideMenuAndPageContent'>
+        <SideMenu></SideMenu>
+        <PageContent></PageContent>
+      </div>
+      <AppFooter/>
+    </AppContext.Provider>
+  </div>
   );
 }
 
