@@ -4,6 +4,7 @@ import Dashboard from '../../Pages/Dashboard'
 import Inventory from '../../Pages/Inventory'
 import Appointments from '../../Pages/Appointments'
 import Profile from '../../Pages/Profile'
+import Stripe from '../../Pages/StripePpayment'
 
 
 
@@ -15,6 +16,7 @@ const AppRoutes = () => {
                 <Route path='/inventory' element={<Inventory/>}/>
                 <Route path='/appointments' element={<Appointments/>}/>
                 <Route path='/profile' element={<Profile/>}/>
+                <Route path='/payment' element={<Stripe/>}/>
             </Routes>
        
         

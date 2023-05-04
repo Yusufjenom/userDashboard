@@ -47,5 +47,20 @@
     background: #a0f7f4;
 
   }
+.stripe{
+    text-align: center;
+
+  }
+
+.btn{
+    font-size: 1.3rem;
+    background-color: #6772e5;
+    color: #fff;
+    border:none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    cursor: pointer;
+
+  }
   
   
